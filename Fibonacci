@@ -1,4 +1,5 @@
-def dpfib(n):
+# fibonacci using dynamin programming
+def dpfibo(n):
     fibarr=[0, 1]
     while len(fibarr)< n+1:
         fibarr.append(0)
@@ -6,7 +7,7 @@ def dpfib(n):
         return n
     else:
         if fibarr[n-1]==0:
-            fibarr[n-1]= dpfib(n-1)
+            fibarr[n-1]= dpfibo(n-1)
         if fibarr[n-2]==0:
             fibarr[n-2]= dpfib(n-2)
     fibarr[n]= fibarr[n-2] + fibarr[n-1]
@@ -14,4 +15,4 @@ def dpfib(n):
 
 n=int(input("Enter range of the sequence: "))
 for i in range(n):
-    print(dpfib(i), end=" ")
+    print(dpfibo(i), end=" ")
