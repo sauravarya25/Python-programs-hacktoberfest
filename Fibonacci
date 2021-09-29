@@ -1,17 +1,26 @@
-def dpfib(n):
-    fibarr=[0, 1]
-    while len(fibarr)< n+1:
-        fibarr.append(0)
-    if n<=1:
-        return n
-    else:
-        if fibarr[n-1]==0:
-            fibarr[n-1]= dpfib(n-1)
-        if fibarr[n-2]==0:
-            fibarr[n-2]= dpfib(n-2)
-    fibarr[n]= fibarr[n-2] + fibarr[n-1]
-    return fibarr[n]
+# Function for nth Fibonacci number
+def Fibonacci(n):
 
-n=int(input("Enter range of the sequence: "))
-for i in range(n):
-    print(dpfib(i), end=" ")
+	# Check if input is 0 then it will
+	# print incorrect input
+	if n < 0:
+		print("Incorrect input")
+
+	# Check if n is 0
+	# then it will return 0
+	elif n == 0:
+		return 0
+
+	# Check if n is 1,2
+	# it will return 1
+	elif n == 1 or n == 2:
+		return 1
+
+	else:
+		return Fibonacci(n-1) + Fibonacci(n-2)
+
+# Driver Program
+print(Fibonacci(9))
+
+# This code is contributed by Saket Modi
+# then corrected and improved by Himanshu Kanojiya
