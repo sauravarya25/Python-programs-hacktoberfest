@@ -16,3 +16,4 @@ def dpfibo(n):
 n=int(input("Enter range of the sequence: "))
 for i in range(n):
     print(dpfibo(i), end=" ")
+print()  # for moving the cursor to next line
